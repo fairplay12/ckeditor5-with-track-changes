@@ -23,9 +23,9 @@
   "main": "./build/ckeditor.js",
   "files": [
     "build",
-    "src",
-    "node_modules"
+    "src"
   ],
+  "bundleDependencies": true,
   "devDependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^19.0.0",
     "@ckeditor/ckeditor5-autoformat": "^19.0.0",
