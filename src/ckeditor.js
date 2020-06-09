@@ -22,7 +22,6 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -32,6 +31,11 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import TrackChanges from '@ckeditor/ckeditor5-track-changes/src/trackchanges';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -51,7 +55,6 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	Indent,
 	Link,
 	List,
 	MediaEmbed,
@@ -60,7 +63,12 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	TrackChanges
+	TrackChanges,
+	Underline,
+	Strikethrough,
+	Font,
+	Highlight,
+	Alignment
 ];
 
 // Editor configuration.
@@ -69,21 +77,30 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontSize',
+			'fontFamily',
+			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
+			'underline',
+			'strikethrough',
+			'highlight',
+			'|',
+			'alignment',
+			'|',
 			'numberedList',
+			'bulletedList',
 			'|',
-			'indent',
-			'outdent',
-			'|',
-			'imageUpload',
+			'link',
 			'blockQuote',
+			'imageUpload',
 			'insertTable',
 			'mediaEmbed',
+			'|',
+			'trackChanges',
+			'|',
 			'undo',
-			'redo'
+			'redo',
 		]
 	},
 	image: {
