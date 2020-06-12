@@ -36,6 +36,7 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Comments from '@ckeditor/ckeditor5-comments/src/comments';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -68,7 +69,8 @@ ClassicEditor.builtinPlugins = [
 	Strikethrough,
 	Font,
 	Highlight,
-	Alignment
+	Alignment,
+	Comments
 ];
 
 // Editor configuration.
@@ -98,6 +100,8 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'|',
 			'trackChanges',
+			'|',
+			'comment',
 			'|',
 			'undo',
 			'redo',
