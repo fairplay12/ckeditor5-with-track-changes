@@ -37,6 +37,7 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Comments from '@ckeditor/ckeditor5-comments/src/comments';
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -70,7 +71,8 @@ ClassicEditor.builtinPlugins = [
 	Font,
 	Highlight,
 	Alignment,
-	Comments
+	Comments,
+	Autosave
 ];
 
 // Editor configuration.
