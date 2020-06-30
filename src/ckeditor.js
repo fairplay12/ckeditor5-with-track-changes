@@ -38,6 +38,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Comments from '@ckeditor/ckeditor5-comments/src/comments';
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -57,6 +58,7 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
 	Link,
 	List,
 	MediaEmbed,
